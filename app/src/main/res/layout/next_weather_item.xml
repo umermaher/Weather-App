@@ -1,0 +1,61 @@
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="5dp"
+        app:cardPreventCornerOverlap="true"
+        android:id="@+id/cardView">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/nextLayout"
+        android:background="@android:color/darker_gray"
+        android:weightSum="10">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:text="Monday"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/nextDayText"
+            android:textSize="18sp"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/nextIcon"
+            android:src="@mipmap/ic_launcher"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:id="@+id/minMaxText"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="max "
+                android:id="@+id/nextMaxText"
+                android:textSize="18sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/ min"
+                android:id="@+id/nextMinText"
+                android:textSize="18sp"
+                android:textColor="#D3D3D3"/>
+        </LinearLayout>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

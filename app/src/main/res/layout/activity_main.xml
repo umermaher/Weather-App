@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintLayout"
+    android:background="#202020"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/white"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:visibility="visible" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/parentLayout"
+            android:gravity="center"
+            android:visibility="gone">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:id="@+id/searchBar"
+                    style="@style/SearchViewStyle"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:hint="Search city weather"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:textColorHint="@color/white"
+                    android:background="@android:color/transparent"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:id="@+id/cityNameLayout"
+                    android:padding="25dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_location"
+                        android:tint="@color/white"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cityNameText"
+                        android:paddingHorizontal="5dp"
+                        android:text="Hyderabad"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="35"
+                        android:layout_centerInParent="true"
+                        android:textSize="80sp"
+                        android:textAlignment="center"
+                        android:id="@+id/tempText"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="°"
+                        android:textSize="50sp"
+                        android:textAlignment="center"
+                        android:id="@+id/dot"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white"
+                        android:layout_toRightOf="@+id/tempText"/>
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:id="@+id/curConditionIcon"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="condition"
+                    android:textSize="20sp"
+                    android:id="@+id/conditionText"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="feels like 30"
+                    android:padding="3dp"
+                    android:id="@+id/feelsLikeText"
+                    android:textColor="#D3D3D3"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/minMaxText"
+                    android:padding="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="max "
+                        android:id="@+id/maxText"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/ min"
+                        android:id="@+id/minText"
+                        android:textColor="#D3D3D3"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/windHumLayout"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp">
+                        <ImageView
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:padding="3dp"
+                            android:src="@drawable/ic_wind2"
+                            android:tint="@color/white"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15 km/h"
+                            android:id="@+id/windText"
+                            android:paddingHorizontal="7dp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_humidity"
+                        android:tint="@color/white"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="22%"
+                        android:id="@+id/humidityText"
+                        android:paddingHorizontal="3dp"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Today"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+
+                    android:id="@+id/heading"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:id="@+id/rvWeather"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Next forecast"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:id="@+id/nextHeading"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="60dp"
+                    android:overScrollMode="never"
+                    android:id="@+id/rvNextWeather"
+                    tools:listitem="@layout/next_weather_item"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
